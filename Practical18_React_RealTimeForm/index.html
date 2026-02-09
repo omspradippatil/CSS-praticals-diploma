@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practical 18 - Real Time Form</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+function RealTimeForm() {
+  const [name, setName] = React.useState("");
+  const [city, setCity] = React.useState("");
+
+  return (
+    <div>
+      <h1>Practical 18: Real Time Form</h1>
+      <form>
+        <div>
+          <label>Name: </label>
+          <input value={name} onChange={(e) => setName(e.target.value)} />
+        </div>
+        <div>
+          <label>City: </label>
+          <input value={city} onChange={(e) => setCity(e.target.value)} />
+        </div>
+      </form>
+      <h2>Live Preview</h2>
+      <p>Name: {name}</p>
+      <p>City: {city}</p>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<RealTimeForm />);
+</script>
+</body>
+</html>

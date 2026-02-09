@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practical 19 - React Form Validation</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+function ValidatedForm() {
+  const [email, setEmail] = React.useState("");
+  const [error, setError] = React.useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!email) {
+      setError("Email is required");
+    } else if (!/^[^@]+@[^@]+\.[^@]+$/.test(email)) {
+      setError("Enter a valid email");
+    } else {
+      setError("");
+      alert("Form submitted with email: " + email);
+    }
+  };
+
+  return (
+    <div>
+      <h1>Practical 19: React Form Validation</h1>
+      <form onSubmit={handleSubmit}>
+        <label>Email: </label>
+        <input value={email} onChange={(e) => setEmail(e.target.value)} />
+        {error && <p style={{ color: 'red' }}>{error}</p>}
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<ValidatedForm />);
+</script>
+</body>
+</html>

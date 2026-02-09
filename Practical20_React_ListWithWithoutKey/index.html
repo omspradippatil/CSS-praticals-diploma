@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practical 20 - List with and without Key</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+function ListExample() {
+  const items = ['Apple', 'Banana', 'Orange'];
+
+  return (
+    <div>
+      <h1>Practical 20: List With and Without Key</h1>
+      <h2>Without key (not recommended)</h2>
+      <ul>
+        {items.map(item => (
+          <li>{item}</li>
+        ))}
+      </ul>
+
+      <h2>With key (recommended)</h2>
+      <ul>
+        {items.map(item => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<ListExample />);
+</script>
+</body>
+</html>

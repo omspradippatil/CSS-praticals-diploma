@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="methodApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Practical 12 - AngularJS Controller Methods</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+        var app = angular.module("methodApp", []);
+        app.controller("MethodController", function($scope) {
+            $scope.count = 0;
+            $scope.message = "";
+
+            $scope.increment = function() {
+                $scope.count++;
+            };
+
+            $scope.decrement = function() {
+                if ($scope.count > 0) $scope.count--;
+            };
+
+            $scope.sayHello = function(name) {
+                $scope.message = "Hello " + name + "!";
+            };
+        });
+    </script>
+</head>
+<body ng-controller="MethodController">
+<h1>Practical 12: Methods in AngularJS Controller</h1>
+<p>Counter: {{ count }}</p>
+<button ng-click="increment()">Increment</button>
+<button ng-click="decrement()">Decrement</button>
+
+<h2>Say Hello</h2>
+<input type="text" ng-model="userName" placeholder="Enter your name">
+<button ng-click="sayHello(userName)">Greet</button>
+<p>{{ message }}</p>
+</body>
+</html>

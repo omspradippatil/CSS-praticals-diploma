@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="goodMorningApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 4 - Angular Good Morning</title>
+    <!--
+      Basic steps to setup Angular (summary):
+      1. Install Node.js and npm from https://nodejs.org
+      2. Install Angular CLI using: npm install -g @angular/cli
+      3. Create project: ng new my-app
+      4. Run: cd my-app and ng serve
+
+      Here we use AngularJS via CDN just to show a simple Good Morning message.
+    -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+        var app = angular.module("goodMorningApp", []);
+        app.controller("MessageController", function($scope) {
+            $scope.message = "Good Morning";
+        });
+    </script>
+</head>
+<body ng-controller="MessageController">
+    <h1>Practical 4: Good Morning using AngularJS</h1>
+    <p>{{ message }}</p>
+</body>
+</html>

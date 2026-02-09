@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practical 11 - CSS Odd Even Rows</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
+        tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+<h1>Practical 11: CSS for Odd and Even Rows</h1>
+<table>
+    <tr>
+        <th>Sr No</th>
+        <th>Name</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>Amit</td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>Neha</td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>Rahul</td>
+    </tr>
+    <tr>
+        <td>4</td>
+        <td>Priya</td>
+    </tr>
+</table>
+</body>
+</html>

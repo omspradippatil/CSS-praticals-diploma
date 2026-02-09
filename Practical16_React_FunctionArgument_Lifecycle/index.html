@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practical 16 - Function Argument and Lifecycle</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+class Message extends React.Component {
+  componentDidMount() {
+    console.log('Component mounted with message: ' + this.props.text);
+  }
+
+  componentWillUnmount() {
+    console.log('Component will unmount');
+  }
+
+  render() {
+    return <h2>{this.props.text}</h2>;
+  }
+}
+
+function App() {
+  const [show, setShow] = React.useState(true);
+
+  const toggle = () => setShow(!show);
+
+  return (
+    <div>
+      <h1>Practical 16: Lifecycle Methods</h1>
+      <button onClick={toggle}>Toggle Message</button>
+      {show && <Message text="Hello from lifecycle component" />}
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+</script>
+</body>
+</html>

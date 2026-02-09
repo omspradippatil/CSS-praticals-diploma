@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="formApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Practical 5 - AngularJS Form Validation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+        var app = angular.module("formApp", []);
+        app.controller("FormController", function($scope) {
+            $scope.user = {};
+            $scope.submitForm = function() {
+                if ($scope.userForm.$valid) {
+                    alert("Form submitted successfully!\nName: " + $scope.user.name + "\nEmail: " + $scope.user.email);
+                }
+            };
+        });
+    </script>
+</head>
+<body ng-controller="FormController">
+<h1>Practical 5: AngularJS Form with Validation</h1>
+<form name="userForm" ng-submit="submitForm()" novalidate>
+    <label>Name:
+        <input type="text" name="name" ng-model="user.name" required>
+    </label>
+    <span style="color:red" ng-show="userForm.name.$touched && userForm.name.$invalid">
+        Name is required
+    </span>
+    <br><br>
+
+    <label>Email:
+        <input type="email" name="email" ng-model="user.email" required>
+    </label>
+    <span style="color:red" ng-show="userForm.email.$touched && userForm.email.$invalid">
+        Valid email is required
+    </span>
+    <br><br>
+
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>

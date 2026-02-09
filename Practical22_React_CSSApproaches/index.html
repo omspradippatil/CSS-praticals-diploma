@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practical 22 - CSS Approaches in React</title>
+    <link rel="stylesheet" href="styles.css">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel">
+// Inline styling
+const inlineStyle = {
+  color: 'white',
+  backgroundColor: 'green',
+  padding: '10px',
+  borderRadius: '4px'
+};
+
+function CssDemo() {
+  return (
+    <div>
+      <h1>Practical 22: CSS Approaches in React</h1>
+
+      {/* Inline styling */}
+      <p style={inlineStyle}>This paragraph uses inline styling.</p>
+
+      {/* CSS stylesheet class */}
+      <p className="sheet-style">This paragraph uses CSS stylesheet class.</p>
+
+      {/* CSS Modules concept: Usually requires build tools; here we just explain */}
+      <p>
+        CSS Modules normally use import like <code>import styles from './MyComponent.module.css'</code>
+        and then <code>className={'{'}styles.someClass{'}'}</code>. In this simple HTML example we
+        only demonstrate inline and stylesheet approaches.
+      </p>
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<CssDemo />);
+</script>
+</body>
+</html>

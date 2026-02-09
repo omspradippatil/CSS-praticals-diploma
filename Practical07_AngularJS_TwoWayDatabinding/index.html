@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="twoWayApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Practical 7 - Two-way Databinding</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="BindingController">
+<h1>Practical 7: Two-way Databinding</h1>
+
+<input type="text" ng-model="name" placeholder="Type your name">
+<p>Hello, {{ name }}</p>
+
+<script>
+    var app = angular.module("twoWayApp", []);
+    app.controller("BindingController", function($scope) {
+        $scope.name = "";
+    });
+</script>
+</body>
+</html>

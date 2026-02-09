@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="tableApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Practical 10 - Display Data in Table</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+        var app = angular.module("tableApp", []);
+        app.controller("TableController", function($scope) {
+            $scope.students = [
+                { roll: 1, name: "Amit", marks: 80 },
+                { roll: 2, name: "Neha", marks: 90 },
+                { roll: 3, name: "Rahul", marks: 85 }
+            ];
+        });
+    </script>
+</head>
+<body ng-controller="TableController">
+<h1>Practical 10: Displaying Data in a Table</h1>
+<table border="1" cellpadding="5" cellspacing="0">
+    <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>Marks</th>
+    </tr>
+    <tr ng-repeat="s in students">
+        <td>{{ s.roll }}</td>
+        <td>{{ s.name }}</td>
+        <td>{{ s.marks }}</td>
+    </tr>
+</table>
+</body>
+</html>

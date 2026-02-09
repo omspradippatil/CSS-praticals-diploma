@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="filterApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Practical 8 - AngularJS Filters</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+        var app = angular.module("filterApp", []);
+        app.controller("FilterController", function($scope) {
+            $scope.amount = 1234.567;
+            $scope.today = new Date();
+            $scope.name = "mahArASHTra";
+        });
+    </script>
+</head>
+<body ng-controller="FilterController">
+<h1>Practical 8: AngularJS Filters</h1>
+<p><strong>Uppercase filter:</strong> {{ name | uppercase }}</p>
+<p><strong>Lowercase filter:</strong> {{ name | lowercase }}</p>
+<p><strong>Currency filter:</strong> {{ amount | currency }}</p>
+<p><strong>Date filter:</strong> {{ today | date:'fullDate' }}</p>
+</body>
+</html>

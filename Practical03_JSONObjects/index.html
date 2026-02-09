@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practical 3 - JSON Objects</title>
+</head>
+<body>
+
+<h1>Practical 3: JSON Objects</h1>
+<p>Output of three different JSON objects:</p>
+
+<h2>Employee</h2>
+<p id="emp"></p>
+
+<h2>Person</h2>
+<p id="person"></p>
+
+<h2>Student</h2>
+<p id="student"></p>
+
+<script>
+    // 1. Employee JSON object
+    var Employee = {
+        name: "Rahul",
+        age: 25
+    };
+
+    document.getElementById("emp").innerHTML =
+        "Employee Name: " + Employee.name + "<br>Age: " + Employee.age;
+
+    // 2. Person JSON object with default values
+    var Person = {
+        name: "Amit",
+        age: 30,
+        city: "Delhi"
+    };
+
+    document.getElementById("person").innerHTML =
+        "Person Name: " + Person.name + "<br>Age: " + Person.age + "<br>City: " + Person.city;
+
+    // 3. Student JSON object
+    var Student = {
+        rollno: 101,
+        name: "Neha",
+        marks: 88
+    };
+
+    document.getElementById("student").innerHTML =
+        "Student Roll No: " + Student.rollno +
+        "<br>Name: " + Student.name +
+        "<br>Marks: " + Student.marks;
+</script>
+
+</body>
+</html>
