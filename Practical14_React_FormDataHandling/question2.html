@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q2 - Form Multiple Fields</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        function App() {
+            const [formData, setFormData] = React.useState({
+                name: '',
+                email: '',
+                city: ''
+            });
+            
+            const [submitted, setSubmitted] = React.useState(false);
+            
+            const handleChange = (e) => {
+                const { name, value } = e.target;
+                setFormData(prev => ({
+                    ...prev,
+                    [name]: value
+                }));
+            };
+            
+            const handleSubmit = () => {
+                setSubmitted(true);
+            };
+            
+            return (
+                <div>
+                    <h2>Question 2: Multiple Form Fields</h2>
+                    <input 
+                        type="text" 
+                        name="name"
+                        value={formData.name} 
+                        onChange={handleChange} 
+                        placeholder="Name"
+                    />
+                    <input 
+                        type="email" 
+                        name="email"
+                        value={formData.email} 
+                        onChange={handleChange} 
+                        placeholder="Email"
+                    />
+                    <input 
+                        type="text" 
+                        name="city"
+                        value={formData.city} 
+                        onChange={handleChange} 
+                        placeholder="City"
+                    />
+                    <button onClick={handleSubmit}>Submit</button>
+                    {submitted && (
+                        <div>
+                            <p>Name: {formData.name}</p>
+                            <p>Email: {formData.email}</p>
+                            <p>City: {formData.city}</p>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+        
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

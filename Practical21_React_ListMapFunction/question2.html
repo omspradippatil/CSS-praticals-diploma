@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q2 - Map with Transformation</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        function MapTransform() {
+            const prices = [100, 200, 300, 400];
+            
+            return (
+                <div>
+                    <ul>
+                        {prices.map((price, index) => (
+                            <li key={index}>Price: Rs.{price}, Discounted: Rs.{price * 0.9}</li>
+                        ))}
+                    </ul>
+                </div>
+            );
+        }
+        
+        function App() {
+            return (
+                <div>
+                    <h2>Question 2: Map with Transformation</h2>
+                    <MapTransform />
+                </div>
+            );
+        }
+        
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

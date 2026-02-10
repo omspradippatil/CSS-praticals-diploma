@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Q2 - Color Alternating Rows</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+        .oddRow { background-color: lightyellow; }
+        .evenRow { background-color: lightblue; }
+    </style>
+</head>
+<body ng-controller="myCtrl">
+    <h2>Question 2: Color Alternating Table Rows</h2>
+    
+    <table border="1" width="400">
+        <tr>
+            <th>Roll</th>
+            <th>Name</th>
+            <th>Marks</th>
+        </tr>
+        <tr ng-repeat="student in students" ng-class="{oddRow : $even, evenRow : $odd}">
+            <td>{{student.roll}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.marks}}</td>
+        </tr>
+    </table>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.students = [
+                {roll: 101, name: 'Alice', marks: 85},
+                {roll: 102, name: 'Bob', marks: 92},
+                {roll: 103, name: 'Charlie', marks: 78},
+                {roll: 104, name: 'David', marks: 88}
+            ];
+        });
+    </script>
+</body>
+</html>

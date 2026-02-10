@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q3 - Conditional CSS</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <style>
+        .active {
+            background-color: lightgreen;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        .inactive {
+            background-color: lightcoral;
+            padding: 10px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        function ConditionalCSS() {
+            const [isActive, setIsActive] = React.useState(true);
+            
+            return (
+                <div>
+                    <div className={isActive ? 'active' : 'inactive'}>
+                        Status: {isActive ? 'Active' : 'Inactive'}
+                    </div>
+                    <button onClick={() => setIsActive(!isActive)}>Toggle</button>
+                </div>
+            );
+        }
+        
+        function App() {
+            return (
+                <div>
+                    <h2>Question 3: Conditional CSS Classes</h2>
+                    <ConditionalCSS />
+                </div>
+            );
+        }
+        
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

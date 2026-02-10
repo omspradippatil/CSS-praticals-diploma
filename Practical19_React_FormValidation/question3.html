@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q3 - Form Validation Multiple Fields</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        function RegistrationForm() {
+            const [form, setForm] = React.useState({
+                username: '',
+                email: '',
+                password: ''
+            });
+            const [formErrors, setFormErrors] = React.useState({});
+            
+            const validateForm = (data) => {
+                const errors = {};
+                if (!data.username) {
+                    errors.username = 'Username required';
+                } else if (data.username.length < 3) {
+                    errors.username = 'Username must be 3+ characters';
+                }
+                if (!data.email) {
+                    errors.email = 'Email required';
+                } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+                    errors.email = 'Invalid email';
+                }
+                if (!data.password || data.password.length < 6) {
+                    errors.password = 'Password must be 6+ characters';
+                }
+                setFormErrors(errors);
+                return Object.keys(errors).length === 0;
+            };
+            
+            const handleChange = (e) => {
+                const { name, value } = e.target;
+                setForm(prev => ({ ...prev, [name]: value }));
+            };
+            
+            const handleSubmit = () => {
+                if (validateForm(form)) {
+                    alert('Form submitted successfully!');
+                }
+            };
+            
+            return (
+                <div>
+                    <input 
+                        type="text" 
+                        name="username"
+                        value={form.username} 
+                        onChange={handleChange} 
+                        placeholder="Username"
+                    />
+                    {formErrors.username && <p style={{color: 'red'}}>{formErrors.username}</p>}
+                    
+                    <input 
+                        type="email" 
+                        name="email"
+                        value={form.email} 
+                        onChange={handleChange} 
+                        placeholder="Email"
+                    />
+                    {formErrors.email && <p style={{color: 'red'}}>{formErrors.email}</p>}
+                    
+                    <input 
+                        type="password" 
+                        name="password"
+                        value={form.password} 
+                        onChange={handleChange} 
+                        placeholder="Password"
+                    />
+                    {formErrors.password && <p style={{color: 'red'}}>{formErrors.password}</p>}
+                    
+                    <button onClick={handleSubmit}>Register</button>
+                </div>
+            );
+        }
+        
+        function App() {
+            return (
+                <div>
+                    <h2>Question 3: Form Validation Multiple Fields</h2>
+                    <RegistrationForm />
+                </div>
+            );
+        }
+        
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

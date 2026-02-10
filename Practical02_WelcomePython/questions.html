@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical 2 - Python Script Solutions</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2025.8.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2025.8.1/core.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+            border-bottom: 3px solid #2196F3;
+            padding-bottom: 10px;
+        }
+        pre {
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .output {
+            background: #e3f2fd;
+            padding: 10px;
+            border-left: 4px solid #2196F3;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #2196F3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1976D2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Practical No. 2: Display "Welcome" using Python Script</h1>
+
+    <!-- Question 1 -->
+    <div class="container">
+        <h2>Question 1: Print list of elements using for loop</h2>
+        <p><strong>Problem:</strong> Print a list of elements using a for loop in Python.</p>
+        <pre><code># Python Solution:
+students = ["Amit", "Priya", "Rohan", "Sneha"]
+for student in students:
+    print(student)</code></pre>
+        <button onclick="copyCode(this)">Copy Code</button>
+        <script type="mpy" terminal>
+# Print list of elements using for loop
+students = ["Amit", "Priya", "Rohan", "Sneha"]
+print("=== Student List ===")
+for student in students:
+    print(student)
+        </script>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="container">
+        <h2>Question 2: Print your name using python script</h2>
+        <p><strong>Problem:</strong> Display your name in the browser using Python script.</p>
+        <pre><code># Python Solution:
+name = "Your Name"
+print(f"Welcome, {name}!")</code></pre>
+        <script type="mpy" terminal>
+# Print your name
+name = "John Doe"
+age = 20
+course = "Diploma in Computer Engineering"
+
+print("===== Personal Information =====")
+print(f"Name: {name}")
+print(f"Age: {age}")
+print(f"Course: {course}")
+        </script>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="container">
+        <h2>Question 3: Print array element using for in loop using py-script</h2>
+        <p><strong>Problem:</strong> Display array elements using a for loop.</p>
+        <pre><code># Python Solution:
+subjects = ["Python", "JavaScript", "HTML", "CSS"]
+for subject in subjects:
+    print(subject)</code></pre>
+        <script type="mpy" terminal>
+# Print array elements
+subjects = ["Python", "JavaScript", "HTML", "CSS", "React"]
+print("===== Available Subjects =====")
+for i, subject in enumerate(subjects, 1):
+    print(f"{i}. {subject}")
+        </script>
+    </div>
+
+    <!-- Exercise 1 -->
+    <div class="container">
+        <h2>Exercise 1: Write py-script to display today's date in browser</h2>
+        <p><strong>Problem:</strong> Display today's date using Python in the browser.</p>
+        <pre><code># Python Solution:
+from datetime import date
+
+today = date.today()
+print(f"Today's Date: {today}")</code></pre>
+        <script type="mpy" terminal>
+# Display today's date
+from datetime import date, datetime
+
+today = date.today()
+current_time = datetime.now()
+
+print(f"Today's Date: {today}")
+print(f"Current Time: {current_time.strftime('%H:%M:%S')}")
+print(f"Day of Week: {today.strftime('%A')}")
+        </script>
+    </div>
+
+    <!-- Exercise 2 -->
+    <div class="container">
+        <h2>Exercise 2: How the python script is embedded in html</h2>
+        <p><strong>Answer:</strong> Python script is embedded in HTML using PyScript framework:</p>
+        <pre><code>&lt;!-- Step 1: Include PyScript CSS and JS in &lt;head&gt; --&gt;
+&lt;link rel="stylesheet" href="https://pyscript.net/releases/2025.8.1/core.css" /&gt;
+&lt;script type="module" src="https://pyscript.net/releases/2025.8.1/core.js"&gt;&lt;/script&gt;
+
+&lt;!-- Step 2: Write Python code in &lt;script type="mpy" terminal&gt; --&gt;
+&lt;script type="mpy" terminal&gt;
+    print("Welcome")
+&lt;/script&gt;</code></pre>
+        <div class="output">
+            <p><strong>Key Points:</strong></p>
+            <ul>
+                <li>Include PyScript library in HTML &lt;head&gt;</li>
+                <li>Use &lt;script type="mpy" terminal&gt; tag for Python code</li>
+                <li>"mpy" means MicroPython</li>
+                <li>"terminal" attribute displays output in terminal-like interface</li>
+                <li>Python code runs directly in the browser</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Additional Example -->
+    <div class="container">
+        <h2>Bonus: Welcome Message with Formatting</h2>
+        <script type="mpy" terminal>
+# Welcome Message
+welcome_msg = "Welcome to Client-Side Scripting Course!"
+print("=" * 45)
+print(welcome_msg.center(45))
+print("=" * 45)
+print("\nThis practical demonstrates:")
+print("✓ Python integration in HTML (PyScript)")
+print("✓ Dynamic content generation")
+print("✓ Client-side Python execution")
+print("=" * 45)
+        </script>
+    </div>
+
+    <script>
+        function copyCode(button) {
+            const code = button.nextElementSibling.textContent;
+            navigator.clipboard.writeText(code);
+            button.textContent = "Copied!";
+            setTimeout(() => {
+                button.textContent = "Copy Code";
+            }, 2000);
+        }
+    </script>
+</body>
+</html>

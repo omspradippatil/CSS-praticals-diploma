@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q2 - Multiple Props</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        function Student(props) {
+            return (
+                <div>
+                    <p>Roll: {props.roll}</p>
+                    <p>Name: {props.name}</p>
+                    <p>Marks: {props.marks}</p>
+                </div>
+            );
+        }
+        
+        function App() {
+            return (
+                <div>
+                    <h2>Question 2: Multiple Props</h2>
+                    <Student roll="101" name="Alice" marks="85" />
+                    <Student roll="102" name="Bob" marks="92" />
+                </div>
+            );
+        }
+        
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

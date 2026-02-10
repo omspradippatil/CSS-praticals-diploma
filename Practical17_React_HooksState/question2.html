@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q2 - Multiple useState Hooks</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        function Form() {
+            const [name, setName] = React.useState('');
+            const [age, setAge] = React.useState('');
+            const [submitted, setSubmitted] = React.useState(false);
+            
+            const handleSubmit = () => {
+                setSubmitted(true);
+            };
+            
+            return (
+                <div>
+                    <input 
+                        type="text" 
+                        value={name} 
+                        onChange={(e) => setName(e.target.value)} 
+                        placeholder="Name"
+                    />
+                    <input 
+                        type="number" 
+                        value={age} 
+                        onChange={(e) => setAge(e.target.value)} 
+                        placeholder="Age"
+                    />
+                    <button onClick={handleSubmit}>Submit</button>
+                    {submitted && (
+                        <div>
+                            <p>Name: {name}</p>
+                            <p>Age: {age}</p>
+                        </div>
+                    )}
+                </div>
+            );
+        }
+        
+        function App() {
+            return (
+                <div>
+                    <h2>Question 2: Multiple useState Hooks</h2>
+                    <Form />
+                </div>
+            );
+        }
+        
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

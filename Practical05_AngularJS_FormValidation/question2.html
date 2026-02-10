@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Q2 - Form Name Validation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+    <h2>Question 2: Name Field Validation</h2>
+    
+    <form name="myForm">
+        <label>Name:</label>
+        <input type="text" name="name" ng-model="name" ng-minlength="3" ng-maxlength="20" required>
+        <p ng-show="myForm.name.$error.required">Name is Required</p>
+        <p ng-show="myForm.name.$error.minlength">Name must be at least 3 characters</p>
+        <p ng-show="myForm.name.$error.maxlength">Name cannot exceed 20 characters</p>
+        <button ng-disabled="myForm.name.$invalid">Submit</button>
+    </form>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.name = '';
+        });
+    </script>
+</body>
+</html>

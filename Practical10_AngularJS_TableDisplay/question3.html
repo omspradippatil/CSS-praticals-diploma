@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Q3 - Table with Filter</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+    <h2>Question 3: Table with Search Filter</h2>
+    
+    <label>Search:</label>
+    <input type="text" ng-model="searchName">
+    
+    <table border="1">
+        <tr>
+            <th>Roll</th>
+            <th>Name</th>
+            <th>City</th>
+        </tr>
+        <tr ng-repeat="student in students | filter : searchName">
+            <td>{{student.roll}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.city}}</td>
+        </tr>
+    </table>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.students = [
+                {roll: 101, name: 'Alice', city: 'Delhi'},
+                {roll: 102, name: 'Bob', city: 'Mumbai'},
+                {roll: 103, name: 'Charlie', city: 'Delhi'}
+            ];
+            $scope.searchName = '';
+        });
+    </script>
+</body>
+</html>

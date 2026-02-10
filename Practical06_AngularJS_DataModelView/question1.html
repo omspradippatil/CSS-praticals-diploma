@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Q1 - One Way Data Binding</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+    <h2>Question 1: One Way Data Binding</h2>
+    
+    <p>Name: {{name}}</p>
+    <p>Age: {{age}}</p>
+    <p>City: {{city}}</p>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.name = "John Doe";
+            $scope.age = 25;
+            $scope.city = "New York";
+        });
+    </script>
+</body>
+</html>

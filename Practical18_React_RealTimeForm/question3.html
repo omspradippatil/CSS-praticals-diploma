@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q3 - Real Time Search Filter</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        function SearchFilter() {
+            const [search, setSearch] = React.useState('');
+            const items = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry'];
+            
+            const filtered = items.filter(item => 
+                item.toLowerCase().includes(search.toLowerCase())
+            );
+            
+            return (
+                <div>
+                    <input 
+                        type="text" 
+                        value={search} 
+                        onChange={(e) => setSearch(e.target.value)} 
+                        placeholder="Search items"
+                    />
+                    <ul>
+                        {filtered.map((item, index) => (
+                            <li key={index}>{item}</li>
+                        ))}
+                    </ul>
+                    <p>Results: {filtered.length}</p>
+                </div>
+            );
+        }
+        
+        function App() {
+            return (
+                <div>
+                    <h2>Question 3: Real Time Search Filter</h2>
+                    <SearchFilter />
+                </div>
+            );
+        }
+        
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

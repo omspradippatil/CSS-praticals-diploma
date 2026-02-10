@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Q3 - Display Array Data</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+    <h2>Question 3: Display Array of Students</h2>
+    
+    <ul>
+        <li ng-repeat="student in students">{{student.name}} - Roll: {{student.roll}}</li>
+    </ul>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.students = [
+                {name: 'Alice', roll: 101},
+                {name: 'Bob', roll: 102},
+                {name: 'Charlie', roll: 103}
+            ];
+        });
+    </script>
+</body>
+</html>

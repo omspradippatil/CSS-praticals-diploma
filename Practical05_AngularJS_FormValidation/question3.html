@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Q3 - Password Validation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+    <h2>Question 3: Password Field Validation</h2>
+    
+    <form name="myForm">
+        <label>Password:</label>
+        <input type="password" name="password" ng-model="password" ng-minlength="6" required>
+        <p ng-show="myForm.password.$error.required">Password is Required</p>
+        <p ng-show="myForm.password.$error.minlength">Password must be at least 6 characters</p>
+        <button ng-disabled="myForm.password.$invalid">Submit</button>
+    </form>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.password = '';
+        });
+    </script>
+</body>
+</html>

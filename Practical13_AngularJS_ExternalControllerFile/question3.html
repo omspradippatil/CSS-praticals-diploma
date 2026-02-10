@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Q3 - External Controller with Array</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="controller.js"></script>
+</head>
+<body ng-controller="myCtrl">
+    <h2>Question 3: External Controller with Array Methods</h2>
+    
+    <input type="text" ng-model="newColor" placeholder="Add color">
+    <button ng-click="addColor()">Add</button>
+    
+    <ul>
+        <li ng-repeat="color in colors">{{color}}</li>
+    </ul>
+
+    <script>
+        app.controller('myCtrl', function($scope) {
+            $scope.colors = ['Red', 'Blue', 'Green'];
+            $scope.newColor = '';
+            $scope.addColor = function() {
+                if($scope.newColor) {
+                    $scope.colors.push($scope.newColor);
+                    $scope.newColor = '';
+                }
+            };
+        });
+    </script>
+</body>
+</html>

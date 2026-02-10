@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q3 - Form Clear and Display</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        function App() {
+            const [username, setUsername] = React.useState('');
+            const [password, setPassword] = React.useState('');
+            const [result, setResult] = React.useState('');
+            
+            const handleSubmit = () => {
+                setResult('Username: ' + username + ', Password: ' + password);
+            };
+            
+            const handleClear = () => {
+                setUsername('');
+                setPassword('');
+                setResult('');
+            };
+            
+            return (
+                <div>
+                    <h2>Question 3: Form with Clear Function</h2>
+                    <input 
+                        type="text" 
+                        value={username} 
+                        onChange={(e) => setUsername(e.target.value)} 
+                        placeholder="Username"
+                    />
+                    <input 
+                        type="password" 
+                        value={password} 
+                        onChange={(e) => setPassword(e.target.value)} 
+                        placeholder="Password"
+                    />
+                    <button onClick={handleSubmit}>Submit</button>
+                    <button onClick={handleClear}>Clear</button>
+                    {result && <p>{result}</p>}
+                </div>
+            );
+        }
+        
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

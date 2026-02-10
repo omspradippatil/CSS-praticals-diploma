@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Q1 - Uppercase and Lowercase Filters</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+    <h2>Question 1: Uppercase and Lowercase Filters</h2>
+    
+    <p>Original: {{text}}</p>
+    <p>Uppercase: {{text | uppercase}}</p>
+    <p>Lowercase: {{text | lowercase}}</p>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.text = 'AngularJS Filter';
+        });
+    </script>
+</body>
+</html>

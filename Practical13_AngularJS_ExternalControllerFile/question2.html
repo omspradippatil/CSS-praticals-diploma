@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Q2 - External Controller with Methods</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="controller.js"></script>
+</head>
+<body ng-controller="myCtrl">
+    <h2>Question 2: External Controller with Methods</h2>
+    
+    <p>Message: {{message}}</p>
+    
+    <input type="text" ng-model="greeting" placeholder="Enter greeting">
+    <button ng-click="showGreeting()">Show Greeting</button>
+    <p>{{displayText}}</p>
+
+    <script>
+        app.controller('myCtrl', function($scope) {
+            $scope.message = "Using external controller!";
+            $scope.displayText = '';
+            $scope.showGreeting = function() {
+                $scope.displayText = $scope.greeting || 'No greeting entered';
+            };
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q3 - Student JSON</title>
+</head>
+<body>
+    <h2>Question 3: Create JSON object Student with rollno, name and marks</h2>
+    
+    <button onclick="displayStudent()">Show Student Details</button>
+    <div id="output"></div>
+
+    <script>
+        function displayStudent() {
+            // Create JSON object
+            const student = {
+                "rollno": 101,
+                "name": "Priya Singh",
+                "marks": 85
+            };
+            
+            // Display
+            const output = document.getElementById('output');
+            output.innerHTML = "<p>Roll No: " + student.rollno + 
+                             "</p><p>Name: " + student.name + 
+                             "</p><p>Marks: " + student.marks + "</p>";
+        }
+    </script>
+</body>
+</html>

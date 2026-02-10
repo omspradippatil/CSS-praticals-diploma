@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q1 - Employee JSON</title>
+</head>
+<body>
+    <h2>Question 1: Create JSON object Employee and display</h2>
+    
+    <button onclick="displayEmployee()">Show Employee Details</button>
+    <div id="output"></div>
+
+    <script>
+        function displayEmployee() {
+            // Create JSON object
+            const employee = {
+                "name": "Amit Kumar",
+                "age": 28
+            };
+            
+            // Display
+            const output = document.getElementById('output');
+            output.innerHTML = "<p>Employee Name: " + employee.name + 
+                             "</p><p>Employee Age: " + employee.age + "</p>";
+        }
+    </script>
+</body>
+</html>

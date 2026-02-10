@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q3 - Prop Update Lifecycle</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        class Display extends React.Component {
+            componentDidMount() {
+                console.log('Display mounted with user: ' + this.props.user);
+            }
+            
+            componentDidUpdate(prevProps) {
+                if (prevProps.user !== this.props.user) {
+                    console.log('User changed from ' + prevProps.user + ' to ' + this.props.user);
+                }
+            }
+            
+            render() {
+                return <p>User: {this.props.user}</p>;
+            }
+        }
+        
+        function App() {
+            const [user, setUser] = React.useState('Alice');
+            
+            return (
+                <div>
+                    <h2>Question 3: Prop Update Lifecycle</h2>
+                    <Display user={user} />
+                    <button onClick={() => setUser('Bob')}>Change to Bob</button>
+                    <button onClick={() => setUser('Charlie')}>Change to Charlie</button>
+                </div>
+            );
+        }
+        
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

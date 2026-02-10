@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q2 - Person JSON</title>
+</head>
+<body>
+    <h2>Question 2: Create JSON object Person with default values</h2>
+    
+    <button onclick="displayPerson()">Show Person Details</button>
+    <div id="output"></div>
+
+    <script>
+        function displayPerson() {
+            // Create JSON object with default values
+            const person = {
+                "name": "John Doe",
+                "age": 25,
+                "city": "Mumbai"
+            };
+            
+            // Display
+            const output = document.getElementById('output');
+            output.innerHTML = "<p>Name: " + person.name + 
+                             "</p><p>Age: " + person.age + 
+                             "</p><p>City: " + person.city + "</p>";
+        }
+    </script>
+</body>
+</html>

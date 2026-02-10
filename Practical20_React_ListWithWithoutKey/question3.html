@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q3 - Dynamic List with Key Benefits</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        function DynamicList() {
+            const [items, setItems] = React.useState([
+                {id: 1, text: 'Task 1'},
+                {id: 2, text: 'Task 2'}
+            ]);
+            const [newTask, setNewTask] = React.useState('');
+            let nextId = 3;
+            
+            const addTask = () => {
+                if (newTask) {
+                    setItems([...items, {id: nextId++, text: newTask}]);
+                    setNewTask('');
+                }
+            };
+            
+            const removeTask = (id) => {
+                setItems(items.filter(item => item.id !== id));
+            };
+            
+            return (
+                <div>
+                    <input 
+                        type="text" 
+                        value={newTask} 
+                        onChange={(e) => setNewTask(e.target.value)} 
+                        placeholder="New task"
+                    />
+                    <button onClick={addTask}>Add</button>
+                    <ul>
+                        {items.map((item) => (
+                            <li key={item.id}>
+                                {item.text}
+                                <button onClick={() => removeTask(item.id)}>Remove</button>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            );
+        }
+        
+        function App() {
+            return (
+                <div>
+                    <h2>Question 3: Dynamic List with Keys</h2>
+                    <DynamicList />
+                </div>
+            );
+        }
+        
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Q3 - Striped Table Pattern</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+        .stripe1 { background-color: #f0f0f0; }
+        .stripe2 { background-color: white; }
+    </style>
+</head>
+<body ng-controller="myCtrl">
+    <h2>Question 3: Striped Table Pattern</h2>
+    
+    <table border="1" width="450">
+        <tr>
+            <th>Roll</th>
+            <th>Name</th>
+            <th>Department</th>
+        </tr>
+        <tr ng-repeat="student in students" ng-class="{stripe1 : $even, stripe2 : $odd}">
+            <td>{{student.roll}}</td>
+            <td>{{student.name}}</td>
+            <td>{{student.dept}}</td>
+        </tr>
+    </table>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.students = [
+                {roll: 101, name: 'Alice', dept: 'CSE'},
+                {roll: 102, name: 'Bob', dept: 'IT'},
+                {roll: 103, name: 'Charlie', dept: 'CSE'},
+                {roll: 104, name: 'David', dept: 'EN'},
+                {roll: 105, name: 'Eve', dept: 'IT'}
+            ];
+        });
+    </script>
+</body>
+</html>

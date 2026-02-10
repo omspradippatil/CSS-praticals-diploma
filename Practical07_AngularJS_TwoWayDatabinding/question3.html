@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Q3 - Two Way Binding with Calculation</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+    <h2>Question 3: Two Way Binding with Calculation</h2>
+    
+    <label>Quantity:</label>
+    <input type="number" ng-model="quantity">
+    
+    <label>Price:</label>
+    <input type="number" ng-model="price">
+    
+    <p>Total: {{quantity * price}}</p>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.quantity = 0;
+            $scope.price = 0;
+        });
+    </script>
+</body>
+</html>

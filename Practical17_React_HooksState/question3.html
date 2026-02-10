@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q3 - useState with Array</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        function TodoList() {
+            const [todos, setTodos] = React.useState(['Task 1', 'Task 2']);
+            const [newTodo, setNewTodo] = React.useState('');
+            
+            const addTodo = () => {
+                if (newTodo) {
+                    setTodos([...todos, newTodo]);
+                    setNewTodo('');
+                }
+            };
+            
+            return (
+                <div>
+                    <input 
+                        type="text" 
+                        value={newTodo} 
+                        onChange={(e) => setNewTodo(e.target.value)} 
+                        placeholder="Add task"
+                    />
+                    <button onClick={addTodo}>Add</button>
+                    <ul>
+                        {todos.map((todo, index) => (
+                            <li key={index}>{todo}</li>
+                        ))}
+                    </ul>
+                </div>
+            );
+        }
+        
+        function App() {
+            return (
+                <div>
+                    <h2>Question 3: useState with Array</h2>
+                    <TodoList />
+                </div>
+            );
+        }
+        
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

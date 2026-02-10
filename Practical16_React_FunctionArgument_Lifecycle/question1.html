@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q1 - Component Lifecycle Mount</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        class Welcome extends React.Component {
+            componentDidMount() {
+                console.log('Component Mounted with prop: ' + this.props.name);
+            }
+            
+            render() {
+                return <p>Welcome {this.props.name}!</p>;
+            }
+        }
+        
+        function App() {
+            return (
+                <div>
+                    <h2>Question 1: Component Lifecycle Mount</h2>
+                    <Welcome name="Alice" />
+                    <Welcome name="Bob" />
+                </div>
+            );
+        }
+        
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q3 - Map with Objects</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        function MapObjects() {
+            const students = [
+                {id: 1, name: 'Alice', marks: 85},
+                {id: 2, name: 'Bob', marks: 92},
+                {id: 3, name: 'Charlie', marks: 78}
+            ];
+            
+            return (
+                <div>
+                    <ul>
+                        {students.map((student) => (
+                            <li key={student.id}>
+                                {student.name} - Marks: {student.marks}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            );
+        }
+        
+        function App() {
+            return (
+                <div>
+                    <h2>Question 3: Map with Objects</h2>
+                    <MapObjects />
+                </div>
+            );
+        }
+        
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

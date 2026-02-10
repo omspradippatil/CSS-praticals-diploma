@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Q3 - Filter and OrderBy Filters</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+    <h2>Question 3: Filter and OrderBy</h2>
+    
+    <label>Search:</label>
+    <input type="text" ng-model="searchText">
+    
+    <ul>
+        <li ng-repeat="item in items | filter : searchText | orderBy : 'name'">{{item.name}}</li>
+    </ul>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.items = [
+                {name: 'Apple'},
+                {name: 'Banana'},
+                {name: 'Cherry'}
+            ];
+            $scope.searchText = '';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q2 - Password Validation</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        function PasswordForm() {
+            const [password, setPassword] = React.useState('');
+            const [errors, setErrors] = React.useState([]);
+            
+            const validatePassword = (value) => {
+                const errorList = [];
+                if (value.length < 6) {
+                    errorList.push('Password must be at least 6 characters');
+                }
+                if (!/[A-Z]/.test(value)) {
+                    errorList.push('Password must contain uppercase letter');
+                }
+                if (!/[0-9]/.test(value)) {
+                    errorList.push('Password must contain number');
+                }
+                setErrors(errorList);
+                setPassword(value);
+            };
+            
+            return (
+                <div>
+                    <input 
+                        type="password" 
+                        value={password} 
+                        onChange={(e) => validatePassword(e.target.value)} 
+                        placeholder="Enter password"
+                    />
+                    {errors.length > 0 && (
+                        <ul style={{color: 'red'}}>
+                            {errors.map((error, index) => (
+                                <li key={index}>{error}</li>
+                            ))}
+                        </ul>
+                    )}
+                    {errors.length === 0 && password && <p style={{color: 'green'}}>Strong password</p>}
+                </div>
+            );
+        }
+        
+        function App() {
+            return (
+                <div>
+                    <h2>Question 2: Password Validation</h2>
+                    <PasswordForm />
+                </div>
+            );
+        }
+        
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

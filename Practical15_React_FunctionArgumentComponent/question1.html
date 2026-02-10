@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Q1 - Props Passing</title>
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel">
+        function Greeting(props) {
+            return <p>Hello {props.name}!</p>;
+        }
+        
+        function App() {
+            return (
+                <div>
+                    <h2>Question 1: Function Arguments (Props)</h2>
+                    <Greeting name="Alice" />
+                    <Greeting name="Bob" />
+                    <Greeting name="Charlie" />
+                </div>
+            );
+        }
+        
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Q1 - Odd Even Table Styling</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+        .odd { background-color: white; }
+        .even { background-color: lightgray; }
+    </style>
+</head>
+<body ng-controller="myCtrl">
+    <h2>Question 1: Odd Even Table Rows</h2>
+    
+    <table border="1" width="300">
+        <tr>
+            <th>Roll</th>
+            <th>Name</th>
+        </tr>
+        <tr ng-repeat="student in students" ng-class="{odd : $even, even : $odd}">
+            <td>{{student.roll}}</td>
+            <td>{{student.name}}</td>
+        </tr>
+    </table>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.students = [
+                {roll: 101, name: 'Alice'},
+                {roll: 102, name: 'Bob'},
+                {roll: 103, name: 'Charlie'},
+                {roll: 104, name: 'David'}
+            ];
+        });
+    </script>
+</body>
+</html>

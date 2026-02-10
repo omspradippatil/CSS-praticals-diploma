@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Q1 - Controller Methods</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-controller="myCtrl">
+    <h2>Question 1: Simple Controller Methods</h2>
+    
+    <p>Result: {{result}}</p>
+    <button ng-click="add(5, 3)">Add 5 + 3</button>
+    <button ng-click="subtract(10, 4)">Subtract 10 - 4</button>
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.result = 0;
+            $scope.add = function(a, b) {
+                $scope.result = a + b;
+            };
+            $scope.subtract = function(a, b) {
+                $scope.result = a - b;
+            };
+        });
+    </script>
+</body>
+</html>
