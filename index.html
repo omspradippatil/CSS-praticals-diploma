@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Practicals - CSS & Web Development</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        
+        .card-body {
+            padding: 15px;
+        }
+        
+        .card-body a {
+            display: block;
+            margin: 8px 0;
+            padding: 8px 12px;
+            background: #f5f5f5;
+            color: #333;
+            text-decoration: none;
+            border-radius: 4px;
+            border-left: 4px solid #667eea;
+            transition: background 0.2s;
+        }
+        
+        .card-body a:hover {
+            background: #e8e8e8;
+            padding-left: 16px;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CSS Practicals & Web Development</h1>
+            <p>Complete Collection of 22 Practical Exercises</p>
+        </header>
+        
+        <div class="grid">
+            <!-- Practical 1 -->
+            <div class="card">
+                <div class="card-header">Practical 01 - Hello World</div>
+                <div class="card-body">
+                    <a href="../Practical01_HelloWorld/index.html">Index</a>
+                    <a href="../Practical01_HelloWorld/question1.html">Question 1</a>
+                    <a href="../Practical01_HelloWorld/question2.html">Question 2</a>
+                </div>
+            </div>
+            
+            <!-- Practical 2 -->
+            <div class="card">
+                <div class="card-header">Practical 02 - Welcome Python</div>
+                <div class="card-body">
+                    <a href="../Practical02_WelcomePython/index.html">Index</a>
+                    <a href="../Practical02_WelcomePython/question1.html">Question 1</a>
+                    <a href="../Practical02_WelcomePython/question2.html">Question 2</a>
+                    <a href="../Practical02_WelcomePython/question3.html">Question 3</a>
+                </div>
+            </div>
+            
+            <!-- Practical 3 -->
+            <div class="card">
+                <div class="card-header">Practical 03 - JSON Objects</div>
+                <div class="card-body">
+                    <a href="../Practical03_JSONObjects/index.html">Index</a>
+                    <a href="../Practical03_JSONObjects/question1.html">Question 1</a>
+                    <a href="../Practical03_JSONObjects/question2.html">Question 2</a>
+                    <a href="../Practical03_JSONObjects/question3.html">Question 3</a>
+                </div>
+            </div>
+            
+            <!-- Practical 4 -->
+            <div class="card">
+                <div class="card-header">Practical 04 - Angular Environment</div>
+                <div class="card-body">
+                    <a href="../Practical04_AngularEnvironment_GoodMorning/index.html">Index</a>
+                    <a href="../Practical04_AngularEnvironment_GoodMorning/question1.html">Question 1</a>
+                    <a href="../Practical04_AngularEnvironment_GoodMorning/question2.html">Question 2</a>
+                </div>
+            </div>
+            
+            <!-- Practical 5 -->
+            <div class="card">
+                <div class="card-header">Practical 05 - Angular Form Validation</div>
+                <div class="card-body">
+                    <a href="../Practical05_AngularJS_FormValidation/index.html">Index</a>
+                    <a href="../Practical05_AngularJS_FormValidation/question1.html">Question 1</a>
+                    <a href="../Practical05_AngularJS_FormValidation/question2.html">Question 2</a>
+                    <a href="../Practical05_AngularJS_FormValidation/question3.html">Question 3</a>
+                </div>
+            </div>
+            
+            <!-- Practical 6 -->
+            <div class="card">
+                <div class="card-header">Practical 06 - Data Model View</div>
+                <div class="card-body">
+                    <a href="../Practical06_AngularJS_DataModelView/index.html">Index</a>
+                    <a href="../Practical06_AngularJS_DataModelView/question1.html">Question 1</a>
+                    <a href="../Practical06_AngularJS_DataModelView/question2.html">Question 2</a>
+                    <a href="../Practical06_AngularJS_DataModelView/question3.html">Question 3</a>
+                </div>
+            </div>
+            
+            <!-- Practical 7 -->
+            <div class="card">
+                <div class="card-header">Practical 07 - Two Way Databinding</div>
+                <div class="card-body">
+                    <a href="../Practical07_AngularJS_TwoWayDatabinding/index.html">Index</a>
+                    <a href="../Practical07_AngularJS_TwoWayDatabinding/question1.html">Question 1</a>
+                    <a href="../Practical07_AngularJS_TwoWayDatabinding/question2.html">Question 2</a>
+                    <a href="../Practical07_AngularJS_TwoWayDatabinding/question3.html">Question 3</a>
+                </div>
+            </div>
+            
+            <!-- Practical 8 -->
+            <div class="card">
+                <div class="card-header">Practical 08 - Filters</div>
+                <div class="card-body">
+                    <a href="../Practical08_AngularJS_Filters/index.html">Index</a>
+                    <a href="../Practical08_AngularJS_Filters/question1.html">Question 1</a>
+                    <a href="../Practical08_AngularJS_Filters/question2.html">Question 2</a>
+                    <a href="../Practical08_AngularJS_Filters/question3.html">Question 3</a>
+                </div>
+            </div>
+            
+            <!-- Practical 9 -->
+            <div class="card">
+                <div class="card-header">Practical 09 - Events</div>
+                <div class="card-body">
+                    <a href="../Practical09_AngularJS_Events/index.html">Index</a>
+                    <a href="../Practical09_AngularJS_Events/question1.html">Question 1</a>
+                    <a href="../Practical09_AngularJS_Events/question2.html">Question 2</a>
+                    <a href="../Practical09_AngularJS_Events/question3.html">Question 3</a>
+                </div>
+            </div>
+            
+            <!-- Practical 10 -->
+            <div class="card">
+                <div class="card-header">Practical 10 - Table Display</div>
+                <div class="card-body">
+                    <a href="../Practical10_AngularJS_TableDisplay/index.html">Index</a>
+                    <a href="../Practical10_AngularJS_TableDisplay/question1.html">Question 1</a>
+                    <a href="../Practical10_AngularJS_TableDisplay/question2.html">Question 2</a>
+                    <a href="../Practical10_AngularJS_TableDisplay/question3.html">Question 3</a>
+                </div>
+            </div>
+            
+            <!-- Practical 11 -->
+            <div class="card">
+                <div class="card-header">Practical 11 - CSS Table Odd/Even</div>
+                <div class="card-body">
+                    <a href="../Practical11_CSS_TableOddEven/index.html">Index</a>
+                    <a href="../Practical11_CSS_TableOddEven/question1.html">Question 1</a>
+                    <a href="../Practical11_CSS_TableOddEven/question2.html">Question 2</a>
+                    <a href="../Practical11_CSS_TableOddEven/question3.html">Question 3</a>
+                </div>
+            </div>
+            
+            <!-- Practical 12 -->
+            <div class="card">
+                <div class="card-header">Practical 12 - Controller Methods</div>
+                <div class="card-body">
+                    <a href="../Practical12_AngularJS_ControllerMethods/index.html">Index</a>
+                    <a href="../Practical12_AngularJS_ControllerMethods/question1.html">Question 1</a>
+                    <a href="../Practical12_AngularJS_ControllerMethods/question2.html">Question 2</a>
+                    <a href="../Practical12_AngularJS_ControllerMethods/question3.html">Question 3</a>
+                </div>
+            </div>
+            
+            <!-- Practical 13 -->
+            <div class="card">
+                <div class="card-header">Practical 13 - External Controller File</div>
+                <div class="card-body">
+                    <a href="../Practical13_AngularJS_ExternalControllerFile/index.html">Index</a>
+                    <a href="../Practical13_AngularJS_ExternalControllerFile/question1.html">Question 1</a>
+                    <a href="../Practical13_AngularJS_ExternalControllerFile/question2.html">Question 2</a>
+                    <a href="../Practical13_AngularJS_ExternalControllerFile/question3.html">Question 3</a>
+                </div>
+            </div>
+            
+            <!-- Practical 14 -->
+            <div class="card">
+                <div class="card-header">Practical 14 - React Form Data Handling</div>
+                <div class="card-body">
+                    <a href="../Practical14_React_FormDataHandling/index.html">Index</a>
+                    <a href="../Practical14_React_FormDataHandling/question1.html">Question 1</a>
+                    <a href="../Practical14_React_FormDataHandling/question2.html">Question 2</a>
+                    <a href="../Practical14_React_FormDataHandling/question3.html">Question 3</a>
+                </div>
+            </div>
+            
+            <!-- Practical 15 -->
+            <div class="card">
+                <div class="card-header">Practical 15 - React Function Argument</div>
+                <div class="card-body">
+                    <a href="../Practical15_React_FunctionArgumentComponent/index.html">Index</a>
+                    <a href="../Practical15_React_FunctionArgumentComponent/question1.html">Question 1</a>
+                    <a href="../Practical15_React_FunctionArgumentComponent/question2.html">Question 2</a>
+                    <a href="../Practical15_React_FunctionArgumentComponent/question3.html">Question 3</a>
+                </div>
+            </div>
+            
+            <!-- Practical 16 -->
+            <div class="card">
+                <div class="card-header">Practical 16 - React Argument & Lifecycle</div>
+                <div class="card-body">
+                    <a href="../Practical16_React_FunctionArgument_Lifecycle/index.html">Index</a>
+                    <a href="../Practical16_React_FunctionArgument_Lifecycle/question1.html">Question 1</a>
+                    <a href="../Practical16_React_FunctionArgument_Lifecycle/question2.html">Question 2</a>
+                    <a href="../Practical16_React_FunctionArgument_Lifecycle/question3.html">Question 3</a>
+                </div>
+            </div>
+            
+            <!-- Practical 17 -->
+            <div class="card">
+                <div class="card-header">Practical 17 - React Hooks State</div>
+                <div class="card-body">
+                    <a href="../Practical17_React_HooksState/index.html">Index</a>
+                    <a href="../Practical17_React_HooksState/question1.html">Question 1</a>
+                    <a href="../Practical17_React_HooksState/question2.html">Question 2</a>
+                    <a href="../Practical17_React_HooksState/question3.html">Question 3</a>
+                </div>
+            </div>
+            
+            <!-- Practical 18 -->
+            <div class="card">
+                <div class="card-header">Practical 18 - React Real Time Form</div>
+                <div class="card-body">
+                    <a href="../Practical18_React_RealTimeForm/index.html">Index</a>
+                    <a href="../Practical18_React_RealTimeForm/question1.html">Question 1</a>
+                    <a href="../Practical18_React_RealTimeForm/question2.html">Question 2</a>
+                    <a href="../Practical18_React_RealTimeForm/question3.html">Question 3</a>
+                </div>
+            </div>
+            
+            <!-- Practical 19 -->
+            <div class="card">
+                <div class="card-header">Practical 19 - React Form Validation</div>
+                <div class="card-body">
+                    <a href="../Practical19_React_FormValidation/index.html">Index</a>
+                    <a href="../Practical19_React_FormValidation/question1.html">Question 1</a>
+                    <a href="../Practical19_React_FormValidation/question2.html">Question 2</a>
+                    <a href="../Practical19_React_FormValidation/question3.html">Question 3</a>
+                </div>
+            </div>
+            
+            <!-- Practical 20 -->
+            <div class="card">
+                <div class="card-header">Practical 20 - List With/Without Key</div>
+                <div class="card-body">
+                    <a href="../Practical20_React_ListWithWithoutKey/index.html">Index</a>
+                    <a href="../Practical20_React_ListWithWithoutKey/question1.html">Question 1</a>
+                </div>
+            </div>
+            
+            <!-- Practical 21 -->
+            <div class="card">
+                <div class="card-header">Practical 21 - React List Map Function</div>
+                <div class="card-body">
+                    <a href="../Practical21_React_ListMapFunction/index.html">Index</a>
+                </div>
+            </div>
+            
+            <!-- Practical 22 -->
+            <div class="card">
+                <div class="card-header">Practical 22 - React CSS Approaches</div>
+                <div class="card-body">
+                    <a href="../Practical22_React_CSSApproaches/index.html">Index</a>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>&copy; 2024 CSS Practicals & Web Development Course. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
