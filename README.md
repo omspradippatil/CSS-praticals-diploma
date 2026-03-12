@@ -1,5 +1,9 @@
 # Client Side Scripting Practicals
 
+## Live Demo
+
+https://csspraticals.netlify.app/
+
 This project contains 22 laboratory practicals for the **Client Side Scripting** subject, organized in separate folders.
 
 Each practical is a simple, self-contained example using HTML, JavaScript, AngularJS, or React (via CDN), and one practical using Python in the browser (PyScript).
