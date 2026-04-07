@@ -1,0 +1,17 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+}
+
+.page {
+  padding: 20px;
+}
+
+.stylesheetBox {
+  padding: 16px;
+  background-color: #cfe2f3;
+  border: 1px solid #333;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}

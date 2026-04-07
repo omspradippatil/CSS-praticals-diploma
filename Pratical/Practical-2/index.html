@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practical 2 - Full Name</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Practical 2: First Name + Last Name</h2>
+  <div id="output"></div>
+
+  <script>
+    const person = {
+      firstName: "Asha",
+      lastName: "Patel"
+    };
+
+    const fullName = person.firstName + " " + person.lastName;
+    document.getElementById("output").textContent = "Full Name: " + fullName;
+  </script>
+</body>
+</html>

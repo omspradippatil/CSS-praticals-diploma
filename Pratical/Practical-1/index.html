@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Practical 1 - JSON Object</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Practical 1: Student JSON Object</h2>
+  <div id="output"></div>
+
+  <script>
+    const student = {
+      rollno: 101,
+      name: "Rahul",
+      marks: 88
+    };
+
+    document.getElementById("output").innerHTML =
+      "Roll No: " + student.rollno + "<br>" +
+      "Name: " + student.name + "<br>" +
+      "Marks: " + student.marks;
+  </script>
+</body>
+</html>
