@@ -2,24 +2,38 @@ import "./App.css";
 import styles from "./Card.module.css";
 
 function App() {
-  const inlineStyle = {
+  const inlineCardStyle = {
     padding: "16px",
-    backgroundColor: "#d9ead3",
-    border: "1px solid #333",
-    borderRadius: "6px",
-    marginBottom: "12px"
+    borderRadius: "10px",
+    border: "2px solid #2a7f62",
+    backgroundColor: "#dff6ed",
+    boxShadow: "0 8px 14px rgba(42, 127, 98, 0.12)"
   };
 
   return (
-    <div className="page">
-      <h2>Practical 9: Three CSS Approaches</h2>
+    <main className="page">
+      <h1>Practical 9: CSS Approaches in React</h1>
+      <p className="intro">
+        This demo shows Inline CSS, External Stylesheet CSS, and CSS Modules in one React app.
+      </p>
 
-      <div style={inlineStyle}>1. This box uses Inline CSS</div>
+      <section className="demoGrid">
+        <article style={inlineCardStyle}>
+          <h3>1. Inline CSS</h3>
+          <p>Style is defined directly in the component using a JavaScript object.</p>
+        </article>
 
-      <div className="stylesheetBox">2. This box uses External Stylesheet CSS</div>
+        <article className="stylesheetCard">
+          <h3>2. External Stylesheet CSS</h3>
+          <p>Style is defined in App.css and applied with a class name.</p>
+        </article>
 
-      <div className={styles.moduleBox}>3. This box uses CSS Module</div>
-    </div>
+        <article className={styles.moduleCard}>
+          <h3>3. CSS Module</h3>
+          <p>Style is scoped locally through Card.module.css to avoid naming conflicts.</p>
+        </article>
+      </section>
+    </main>
   );
 }
 

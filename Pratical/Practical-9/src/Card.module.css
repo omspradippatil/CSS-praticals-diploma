@@ -1,7 +1,7 @@
-.moduleBox {
+.moduleCard {
   padding: 16px;
-  background-color: #fce5cd;
-  border: 1px solid #333;
-  border-radius: 6px;
-  margin-bottom: 12px;
+  border-radius: 10px;
+  border: 2px solid #b15a00;
+  background: #ffedd9;
+  box-shadow: 0 8px 14px rgba(177, 90, 0, 0.12);
 }
