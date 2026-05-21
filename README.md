@@ -2,7 +2,7 @@
 
 ## Live Demo
 
-https://csspraticals.netlify.app/
+https://omspradippatil.github.io/CSS-praticals-diploma
 
 This project contains 22 laboratory practicals for the **Client Side Scripting** subject, organized in separate folders.
 
