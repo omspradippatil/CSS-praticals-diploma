@@ -1,4 +1,4 @@
-﻿# Client Side Scripting Practicals
+# Client Side Scripting Practicals
 
 ## Live Demo
 
@@ -52,91 +52,91 @@ This is useful especially for React and AngularJS examples.
 
 Each practical is in its own folder with a single main file `index.html` (and sometimes extra `.js` or `.css` files).
 
-1. **Practical 1 â€“ Hello World**  
+1. **Practical 1  Hello World**  
    Folder: `Practical01_HelloWorld`  
    - Shows "Hello World" using `document.write()`, `console.log()`, and `alert()`.
 
-2. **Practical 2 â€“ Welcome using Python script**  
+2. **Practical 2  Welcome using Python script**  
    Folder: `Practical02_WelcomePython`  
    - Uses PyScript to display "Welcome" in the browser using Python code.
 
-3. **Practical 3 â€“ JSON Objects**  
+3. **Practical 3  JSON Objects**  
    Folder: `Practical03_JSONObjects`  
    - Creates Employee, Person, and Student objects in JSON and displays them.
 
-4. **Practical 4 â€“ Angular environment & Good Morning**  
+4. **Practical 4  Angular environment & Good Morning**  
    Folder: `Practical04_AngularEnvironment_GoodMorning`  
    - Comments explain Angular CLI setup; page uses AngularJS CDN to display "Good Morning".
 
-5. **Practical 5 â€“ AngularJS Form with Validation**  
+5. **Practical 5  AngularJS Form with Validation**  
    Folder: `Practical05_AngularJS_FormValidation`  
    - Form with name and email, required + basic validation.
 
-6. **Practical 6 â€“ Data Model and View**  
+6. **Practical 6  Data Model and View**  
    Folder: `Practical06_AngularJS_DataModelView`  
    - Employee object bound to the view using AngularJS.
 
-7. **Practical 7 â€“ Two-way Databinding**  
+7. **Practical 7  Two-way Databinding**  
    Folder: `Practical07_AngularJS_TwoWayDatabinding`  
    - Input field bound to a greeting using `ng-model`.
 
-8. **Practical 8 â€“ AngularJS Filters**  
+8. **Practical 8  AngularJS Filters**  
    Folder: `Practical08_AngularJS_Filters`  
    - Demonstrates uppercase, lowercase, currency, and date filters.
 
-9. **Practical 9 â€“ AngularJS Events**  
+9. **Practical 9  AngularJS Events**  
    Folder: `Practical09_AngularJS_Events`  
    - Button click counter and mouseover/mouseout events.
 
-10. **Practical 10 â€“ Display Data in Table**  
+10. **Practical 10  Display Data in Table**  
     Folder: `Practical10_AngularJS_TableDisplay`  
     - Student data displayed in a table using `ng-repeat`.
 
-11. **Practical 11 â€“ CSS Odd and Even Table Rows**  
+11. **Practical 11  CSS Odd and Even Table Rows**  
     Folder: `Practical11_CSS_TableOddEven`  
     - Uses CSS `nth-child(odd/even)` to style table rows differently.
 
-12. **Practical 12 â€“ AngularJS Controller Methods**  
+12. **Practical 12  AngularJS Controller Methods**  
     Folder: `Practical12_AngularJS_ControllerMethods`  
     - Controller with multiple methods (increment, decrement, greeting) bound to buttons.
 
-13. **Practical 13 â€“ Controllers in External Files**  
+13. **Practical 13  Controllers in External Files**  
     Folder: `Practical13_AngularJS_ExternalControllerFile`  
     - AngularJS controller defined in an external JS file `app.js`.
 
-14. **Practical 14 â€“ React Form Handling**  
+14. **Practical 14  React Form Handling**  
     Folder: `Practical14_React_FormDataHandling`  
     - React form to handle name and email, displays submitted data.
 
-15. **Practical 15 â€“ Pass Function Argument into React Component**  
+15. **Practical 15  Pass Function Argument into React Component**  
     Folder: `Practical15_React_FunctionArgumentComponent`  
     - Parent component passes a `name` prop into a child component.
 
-16. **Practical 16 â€“ Function Argument and React Lifecycle**  
+16. **Practical 16  Function Argument and React Lifecycle**  
     Folder: `Practical16_React_FunctionArgument_Lifecycle`  
     - Class component with props and lifecycle methods, toggled via a button.
 
-17. **Practical 17 â€“ React Hooks State**  
+17. **Practical 17  React Hooks State**  
     Folder: `Practical17_React_HooksState`  
     - Counter implemented with `useState` hook.
 
-18. **Practical 18 â€“ Real Time Form using React Components**  
+18. **Practical 18  Real Time Form using React Components**  
     Folder: `Practical18_React_RealTimeForm`  
     - Form that shows live preview of entered data.
 
-19. **Practical 19 â€“ React Form Validations**  
+19. **Practical 19  React Form Validations**  
     Folder: `Practical19_React_FormValidation`  
     - Email validation with error message and alert on success.
 
-20. **Practical 20 â€“ Manipulate List with Key / without Key**  
+20. **Practical 20  Manipulate List with Key / without Key**  
     Folder: `Practical20_React_ListWithWithoutKey`  
     - Shows same list rendered with and without `key` props.
 
-21. **Practical 21 â€“ Render List using map()**  
+21. **Practical 21  Render List using map()**  
     Folder: `Practical21_React_ListMapFunction`  
     - Uses `map()` to render a student list with keys.
 
-22. **Practical 22 â€“ CSS Approaches in React**  
+22. **Practical 22  CSS Approaches in React**  
     Folder: `Practical22_React_CSSApproaches`  
     - Demonstrates inline styles, external CSS stylesheet class, and explains CSS Modules conceptually.
 
@@ -146,9 +146,19 @@ Each practical is in its own folder with a single main file `index.html` (and so
 
 - Make sure you are **online** when opening the files so CDNs (AngularJS, React, PyScript) can load.
 - If your browser blocks mixed or insecure content, prefer using Live Server (it serves over `http://localhost`).
-- You can customize any practicalâ€™s code inside its folder if your teacher asks for variations.
+- You can customize any practicals code inside its folder if your teacher asks for variations.
 
-## ☕ Support
+##  Support
 
 If you find this project helpful, consider [supporting me](https://ompradippatil.netlify.app/donate).
 
+---
+
+##  Contact the Developer
+
+**Developed by OM Patil**
+
+- **Portfolio**: [ompradippatil.netlify.app](https://ompradippatil.netlify.app/)
+- **GitHub**: [@omspradippatil](https://github.com/omspradippatil)
+- **LinkedIn**: [OM Pradip Patil](https://in.linkedin.com/in/om-pradip-patil)
+- **Email**: [omspradippatil@gmail.com](mailto:omspradippatil@gmail.com)
