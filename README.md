@@ -150,7 +150,7 @@ Each practical is in its own folder with a single main file `index.html` (and so
 
 ##  Support
 
-If you find this project helpful, consider [supporting me](https://ompradippatil.netlify.app/donate).
+If you find this project helpful, consider [supporting me](https://om-patil.com/donate).
 
 ---
 
